@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Delete Member</h1>
+    <p>Are you sure you want to delete {{ member.first_name }} {{ member.last_name }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Confirm Delete">
+    </form>
+    <a href="{% url 'all_members' %}">Cancel</a>
+</body>
+</html>

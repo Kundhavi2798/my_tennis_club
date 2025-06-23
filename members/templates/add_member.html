@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Add New Member</h1>
+    <form method="post" style="margin-bottom: 30px;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Add Member" style="margin-top: 10px;">
+    </form>
+    <a href="{% url 'all_members' %}" style="margin-top: 10px; display: inline-block;">Back to All Members</a>
+</body>
+</html>

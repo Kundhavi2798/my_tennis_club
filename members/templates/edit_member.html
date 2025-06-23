@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Edit Member</h1>
+    <form method="post">
+        {% csrf_token %}
+        First name: <input type="text" name="first_name" value="{{ member.first_name }}"><br>
+        Last name: <input type="text" name="last_name" value="{{ member.last_name }}"><br>
+        Email: <input type="email" name="email" value="{{ member.email }}"><br>
+        Phone: <input type="text" name="phone_number" value="{{ member.phone_number }}"><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
